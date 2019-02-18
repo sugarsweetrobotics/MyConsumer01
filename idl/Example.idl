@@ -1,0 +1,22 @@
+
+
+module ssr {
+
+  interface ServiceExample {
+
+    exception NoSuchFileError {
+      string message;
+    };
+
+
+     long open(in string filename) raises(NoSuchFileError);
+
+     long write(in long fp, in long data);
+
+     long read(in long fp);
+
+     oneway void fastwrite(in long fp, in long data);
+
+  };
+
+};
